@@ -1,22 +1,22 @@
 const lightThemeOptions = {
   palette: {
     primary: {
-      main: "#e3f2fd",
+      main: "#336EFD",
     },
     secondary: {
-      main: "#f3e5f5",
-    },
-    error: {
-      main: "#e57373",
-    },
-    warning: {
-      main: "#ffb74d",
-    },
-    info: {
-      main: "#4fc3f7",
+      main: "#6C757D",
     },
     success: {
-      main: "#81c784",
+      main: "#278754",
+    },
+    error: {
+      main: "#DC3545",
+    },
+    warning: {
+      main: "#F9C108",
+    },
+    info: {
+      main: "#47CAF0",
     },
   },
 };
