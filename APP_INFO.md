@@ -1,5 +1,5 @@
 ## Project Structure
-
+```
 cherry-charm
 ├── public/
 │ ├── images/
@@ -42,7 +42,7 @@ cherry-charm
 ├── package.json
 ├── README.md
 └── yarn.lock or package-lock.json
-
+```
 ### Explanation
 
 #### public/
