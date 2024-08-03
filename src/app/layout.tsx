@@ -1,12 +1,10 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import CustomThemeProvider from "@/providers/custom-theme-provider";
-import { Provider } from "react-redux";
-import appStore from "@/states/app-store";
 import OrgProvider from "@/providers/org-provider";
+import ResponsiveAppBar from "@/components/common/nav-page";
 
-const inter = Inter({ subsets: ["latin"] });
+// const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Shine Savvy",
@@ -20,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body>
         <OrgProvider>{children}</OrgProvider>
       </body>
     </html>

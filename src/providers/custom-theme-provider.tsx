@@ -1,7 +1,8 @@
+import ResponsiveAppBar from "@/components/common/nav-page";
 import darkThemeOptions from "@/theme/dark-theme";
 import lightThemeOptions from "@/theme/light-theme";
 import { ThemeProvider } from "@emotion/react";
-import { createTheme } from "@mui/material";
+import { Container, createTheme } from "@mui/material";
 import { createContext, useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 
@@ -23,7 +24,10 @@ export default function CustomThemeProvider({ children }: { children: any }) {
 
   return (
     <CustomThemeContext.Provider value={themeOptions}>
-      <ThemeProvider theme={theme}>{children}</ThemeProvider>
+      <ThemeProvider theme={theme}>
+        <ResponsiveAppBar />
+        <Container maxWidth="xl"> {children}</Container>
+      </ThemeProvider>
     </CustomThemeContext.Provider>
   );
 }

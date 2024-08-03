@@ -8,28 +8,40 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
 import LightModeIcon from "@mui/icons-material/LightMode";
-import { Icon, useTheme } from "@mui/material";
+import { Link, useTheme } from "@mui/material";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import { useDispatch, useSelector } from "react-redux";
 import { changeTheme } from "@/states/slices/theme-slice";
+import { useRouter } from "next/navigation";
+// import Link from "next/link";
 
 function ResponsiveAppBar() {
   const selectedTheme = useSelector((state: any) => state.theme.selectedTheme);
   const dispatch = useDispatch();
   const theme = useTheme();
-
-  console.log("Theme: ", selectedTheme);
-
+  const router = useRouter();
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
+    <Box sx={{ flexGrow: 1, mb: 10 }}>
+      <AppBar position="fixed">
         <Toolbar
           sx={{
             color: "white",
             backgroundColor: `${theme.palette.primary.main}`,
           }}
         >
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+          <Typography
+            variant="h6"
+            component="div"
+            sx={{
+              flexGrow: 1,
+              ":hover": {
+                cursor: "pointer",
+              },
+            }}
+            onClick={() => {
+              router.replace("/");
+            }}
+          >
             Shine Savvy
           </Typography>
 
