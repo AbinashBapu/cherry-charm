@@ -11,12 +11,14 @@ type ProductShortDetails = {
   imageUrl: string;
   title: string;
   price: number;
+  productDetailUrl: string;
 };
 
 export default function ProductCard({
   imageUrl,
   title,
   price,
+  productDetailUrl,
 }: ProductShortDetails) {
   const theme = useTheme();
 
@@ -47,7 +49,7 @@ export default function ProductCard({
             <Typography variant="h6" color={"primary"}>
               Rs. {price}
             </Typography>
-            <Button variant="outlined" size="small">
+            <Button variant="outlined" size="small" href={productDetailUrl}>
               View Details
             </Button>
           </Box>
